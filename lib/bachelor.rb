@@ -11,7 +11,7 @@ def get_contestant_name(data, occupation)
   # code here
   name = ""
   data.each do |season, contestants|
-    season.each do |contestant|
+    data[season].each do |contestant|
       name = contestant["occupation"] if contestant["occupation"] == occupation
     end
   end
