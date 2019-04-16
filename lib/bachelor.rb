@@ -9,6 +9,11 @@ end
 
 def get_contestant_name(data, occupation)
   # code here
+  name = ""
+  data.each do |contestants|
+    name = contestants["occupation"] if contestants["occupation"] == occupation
+  end
+  name
 end
 
 def count_contestants_by_hometown(data, hometown)
