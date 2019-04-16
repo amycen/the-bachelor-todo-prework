@@ -10,8 +10,10 @@ end
 def get_contestant_name(data, occupation)
   # code here
   name = ""
-  data.each do |contestants|
-    name = contestants["occupation"] if contestants["occupation"] == occupation
+  data.each do |season|
+    season.each do |contestants|
+      name = contestants["occupation"] if contestants["occupation"] == occupation
+    end
   end
   name
 end
@@ -27,6 +29,7 @@ end
 
 def get_occupation(data, hometown)
   # code here
+  
 end
 
 def get_average_age_for_season(data, season)
