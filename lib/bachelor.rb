@@ -37,7 +37,7 @@ def get_occupation(data, hometown)
       occupation = contestant["occupation"] if contestant["hometown"] == hometown
     end
   end
-  name
+  occupation
 end
 
 def get_average_age_for_season(data, season)
