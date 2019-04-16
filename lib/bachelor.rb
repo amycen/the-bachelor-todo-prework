@@ -1,7 +1,8 @@
 def get_first_name_of_season_winner(data, season)
   # code here
-  data[season].map do |contestants|
-    (contestants["name"].split[0] if ["status"] == "Winner").compact
+  winner_name = ""
+  data[season].each do |contestants|
+    winner_name = contestants["name"].split[0] if ["status"] == "Winner"
   end
 end
 
